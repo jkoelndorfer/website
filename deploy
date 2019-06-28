@@ -1,0 +1,8 @@
+#!/bin/bash
+
+script_dir=$(dirname "$(realpath "$0")")
+
+cd "$script_dir"
+hugo
+cd public
+aws s3 sync --acl public-read --delete . s3://johnk.io
