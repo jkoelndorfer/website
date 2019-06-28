@@ -1,4 +1,4 @@
-baseURL      = "https://blog.johnk.io/"
+baseURL      = "http://johnk.io/"
 languageCode = "en-us"
 author       = "John Koelndorfer"
 title        = "John Koelndorfer"
