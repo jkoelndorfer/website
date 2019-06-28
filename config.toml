@@ -7,7 +7,7 @@ theme        = "hugo-goa"
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
-description = "Information technology professional with a breadth of experience."
+description = "Senior Software Developer @ [AerisWeather](https://www.aerisweather.com)"
 dateformat  = "2006-01-02"
 
 [params.social]
