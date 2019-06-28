@@ -1,0 +1,28 @@
+baseURL      = "https://blog.johnk.io/"
+languageCode = "en-us"
+author       = "John Koelndorfer"
+title        = "John Koelndorfer"
+theme        = "hugo-goa"
+
+[params]
+author      = "John Koelndorfer"
+intro       = "Technologist and purveyor of fine automation"
+description = "Information technology professional with a breadth of experience."
+dateformat  = "2006-01-02"
+
+[params.social]
+github   = "jkoelndorfer"
+linkedin = "jkoelndorfer"
+email    = "jkoelndorfer@gmail.com"
+
+[[menu.main]]
+name       = "about"
+weight     = 100
+identifier = "about"
+url        = "/about/"
+
+[[menu.main]]
+name       = "blog"
+weight     = "200"
+identifier = "blog"
+url        = "/blog/"

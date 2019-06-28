@@ -1,0 +1,26 @@
+.content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content figcaption {
+    text-align: center;
+}
+
+.personal-photo-crop {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
