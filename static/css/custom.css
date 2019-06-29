@@ -24,3 +24,11 @@
     border-radius: 50%;
     margin-bottom: 15px;
 }
+
+.content a, .content a:visited, .content a:link {
+    color: #000099;
+}
+
+.content a:hover {
+    color: #0000cc;
+}
