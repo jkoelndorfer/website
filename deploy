@@ -3,9 +3,18 @@
 set -eo pipefail
 
 env=$1
-if [[ -z "$env" ]]; then
+
+function usage() {
     echo 'You must pass the name of the environment as the first argument to this script.' >&2
     echo 'Valid values are: dev, prod' >&2
+}
+
+if [[ "$env" == 'prod' ]]; then
+    base_url='https://www.johnk.io'
+elif [[ "$env" == 'dev' ]]; then
+    base_url='https://www.dev.johnk.io'
+else
+    usage
     exit 1
 fi
 
@@ -13,6 +22,7 @@ script_dir=$(dirname "$(realpath "$0")")
 aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
 
 cd "$script_dir"
-hugo
+rm -rf 'public/'
+hugo --baseURL "$base_url"
 cd public
 aws s3 sync --acl public-read --delete . "s3://$aws_account_id-blog-$env"

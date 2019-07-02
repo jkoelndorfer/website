@@ -1,8 +1,10 @@
-baseURL      = "http://johnk.io/"
 languageCode = "en-us"
 author       = "John Koelndorfer"
 title        = "John Koelndorfer"
 theme        = "hugo-goa"
+
+relativeURLs = false
+uglyURLs     = true
 
 [params]
 author      = "John Koelndorfer"
@@ -20,10 +22,10 @@ email    = "jkoelndorfer@gmail.com"
 name       = "about"
 weight     = 100
 identifier = "about"
-url        = "/about/"
+url        = "/about/index.html"
 
 [[menu.main]]
 name       = "blog"
 weight     = "200"
 identifier = "blog"
-url        = "/blog/"
+url        = "/blog.html"
