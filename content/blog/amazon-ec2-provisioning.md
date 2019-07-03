@@ -5,8 +5,6 @@ tags:
     - aws
     - devops
     - ec2
-categories:
-    - technology
 draft: true
 ---
 
@@ -35,14 +33,64 @@ and deploying the SSH public key so that the user can log into the instance.
 [cloud-init][1] provides a couple of options for provisioning EC2 instances.
 The first is by [specifying user-data for the instance][3]. The second is
 [by adding scripts to one of the directories in `/var/lib/cloud/scripts`][4]
-(which isn't explicitly spelled out in the documentation).
+(which isn't clearly spelled out in the documentation).
 
-My provisioning strategy hands more complex configuration tasks over to
-[Ansible][2]. When the instance boots, cloud-init fires and performs
-its default, minimal set of tasks. Then it invokes an Ansible playbook
+For simple cases, cloud-init is likely sufficient. However, as your team
+and infrastructure grow you may find it difficult to test efficiently and
+maximize configuration reuse.
 
+Building our own AMI
+--------------------
+
+In order to meet the goal of providing a consistently behaving deployment, we
+need to build our own AMI. Building an AMI ensures that the service we deploy
+always starts from a known-good state. The image includes everything from the
+kernel up to the application. Building an AMI also has the side benefit of
+insulating us from third-party service outages, e.g. Docker Hub or Artifactory.
+
+HashiCorp's [Packer][7] can help us build an AMI. Packer is a simple, effective
+tool for creating a variety of different types of system images. In its
+simplest configuration, Packer requires a builder and provisioner to describe
+how images get created.
+
+Packer provides AMI building functionality out of the box. The simplest
+way to get started is to use the [EBS backend][8]. A source AMI, AWS region,
+admin username, and destination AMI name are all that are required to build
+your own AMI.
+
+With a builder established, you need a provisioner to do the instance
+configuration. There are myriad options here but in my view only one
+clear winner.
+
+Enter Ansible
+-------------
+
+My provisioning strategy leans heavily on [Ansible][2]. Ansible is part of
+the configuration management class of tools, which includes the likes of
+Puppet, Chef, and Salt. What makes Ansible great, though, is its exceptional
+flexibility.
+
+Ansible is designed from the ground up as an agentless tool that executes
+against remote nodes, which makes testing changes a breeze. If local testing
+is sufficient, fire up a virtual machine in Vagrant and point Ansible at it.
+If you need to test something cloud-specific, spin up a test instance and
+point Ansible at that. You don't need to push a cookbook to a Chef server
+just to see how your changes fare. It's all local!
+
+Many of the modules provided by Ansible are idempotent, so with minimal
+effort you can test a new role or a change and run it until you are
+confident it is bulletproof. Tag your tasks and run only those you
+want to test to go even faster.
+
+Ansible also provides some nifty operations features: [trivially look up
+the value of an AWS SSM parameter][5] and [perform a rolling upgrade
+of your application][6].
 
 [1]: https://cloudinit.readthedocs.io/en/latest/
 [2]: https://docs.ansible.com/ansible/latest/index.html
 [3]: https://cloudinit.readthedocs.io/en/latest/topics/format.html
 [4]: https://stackoverflow.com/a/10455027
+[5]: https://docs.ansible.com/ansible/latest/plugins/lookup/aws_ssm.html
+[6]: https://docs.ansible.com/ansible/latest/user_guide/guide_rolling_upgrade.html#the-rolling-upgrade
+[7]: https://www.packer.io
+[8]: https://www.packer.io/docs/builders/amazon-ebs.html
