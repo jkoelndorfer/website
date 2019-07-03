@@ -2,7 +2,10 @@
 title: "Glue It Together With Parameter Store"
 date: 2019-06-28T19:17:06-05:00
 description: Why AWS Parameter Store is awesome.
-
+tags:
+    - aws
+    - devops
+    - tech
 draft: no
 ---
 
