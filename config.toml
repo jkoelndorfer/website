@@ -6,6 +6,9 @@ theme        = "hugo-goa"
 relativeURLs = false
 uglyURLs     = true
 
+PygmentsUseClasses = true
+PygmentsCodeFences = true
+
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
