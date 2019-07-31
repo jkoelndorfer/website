@@ -15,8 +15,8 @@ my EC2 provisioning strategy, both at home and in the workplace, and it's in a s
 now where I am happy with it. This post will walk through the EC2 provisioning
 process and describe the strategy and its benefits.
 
-Applying Configuration to an EC2 Instance
------------------------------------------
+How EC2 Instances Are Configured
+--------------------------------
 
 EC2 instances begin from an Amazon Machine Image (AMI). AMIs reference an EBS
 snapshot, which is a block-level copy of the root disk (and possibly other
@@ -37,10 +37,16 @@ The first is by [specifying user-data for the instance][3]. The second is
 
 For simple cases, cloud-init is likely sufficient. However, as your team
 and infrastructure grow you may find it difficult to test efficiently and
-maximize configuration reuse.
+maximize configuration reuse. The canonical cloud-init strategy of configuring
+via user data means that changes to an auto scaling group can cause massive
+changes to how your instances handle provisioning themselves, which (in my
+opinion) are clearly separate concerns.
 
-Building our own AMI
+Creating Consistency
 --------------------
+
+Building an AMI
+---------------
 
 In order to meet the goal of providing a consistently behaving deployment, we
 need to build our own AMI. Building an AMI ensures that the service we deploy
@@ -56,7 +62,30 @@ how images get created.
 Packer provides AMI building functionality out of the box. The simplest
 way to get started is to use the [EBS backend][8]. A source AMI, AWS region,
 admin username, and destination AMI name are all that are required to build
-your own AMI.
+your own AMI. A basic example follows:
+
+{{< highlight json "linenos=table" >}}
+{
+    "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-east-1",
+    "source_ami_filter": {
+      "filters": {
+        "name": "debian-stretch-hvm-x86_64-gp2*"
+      },
+      "owners": ["679593333241"],
+      "most_recent": true
+    },
+    "instance_type": "t3.micro",
+    "ssh_username": "admin",
+    "ami_name": "yourami {{isotime \"2006-01-02 1504\"}}"
+  }],
+  "provisioners": [...]
+}
+{{< /highlight >}}
+
+This will get you an AMI based on the most recent Debian Stretch in
+the us-east-1 region.
 
 With a builder established, you need a provisioner to do the instance
 configuration. There are myriad options here but in my view only one
@@ -75,7 +104,8 @@ against remote nodes, which makes testing changes a breeze. If local testing
 is sufficient, fire up a virtual machine in Vagrant and point Ansible at it.
 If you need to test something cloud-specific, spin up a test instance and
 point Ansible at that. You don't need to push a cookbook to a Chef server
-just to see how your changes fare. It's all local!
+to see how your changes fare, and there is no special
+configuration required for local testing.
 
 Many of the modules provided by Ansible are idempotent, so with minimal
 effort you can test a new role or a change and run it until you are
@@ -85,6 +115,11 @@ want to test to go even faster.
 Ansible also provides some nifty operations features: [trivially look up
 the value of an AWS SSM parameter][5] and [perform a rolling upgrade
 of your application][6].
+
+### Ansible as a Packer Provisioner
+
+Packer helpfully provides support for using Ansible as a provisioner
+out of the box.
 
 [1]: https://cloudinit.readthedocs.io/en/latest/
 [2]: https://docs.ansible.com/ansible/latest/index.html
