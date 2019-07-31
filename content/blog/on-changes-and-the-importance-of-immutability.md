@@ -2,6 +2,11 @@
 title: "On Changes and the Importance of Immutability"
 date: 2019-07-30T20:51:00-05:00
 description: "Turns out, a Dockerfile is not an artifact."
+tags:
+    - aws
+    - devops
+    - tech
+    - troubleshooting
 ---
 
 Yesterday morning at work we had a routine deployment for a new version of our
