@@ -25,7 +25,7 @@ email    = "jkoelndorfer@gmail.com"
 name       = "about"
 weight     = 100
 identifier = "about"
-url        = "/about/index.html"
+url        = "/about.html"
 
 [[menu.main]]
 name       = "blog"
