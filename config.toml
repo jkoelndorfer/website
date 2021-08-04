@@ -1,7 +1,7 @@
 languageCode = "en-us"
 author       = "John Koelndorfer"
 title        = "John Koelndorfer"
-theme        = "hugo-goa"
+theme        = "johnk-io"
 
 relativeURLs = false
 uglyURLs     = true
@@ -12,23 +12,21 @@ PygmentsCodeFences = true
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
-description = "Senior Software Developer @ [AerisWeather](https://www.aerisweather.com)"
+description = "Site Reliability Engineer @ [AerisWeather](https://www.aerisweather.com)"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
 
-[params.social]
-github   = "jkoelndorfer"
-linkedin = "jkoelndorfer"
-email    = "jkoelndorfer@gmail.com"
+[params.meta]
+keywords = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
 
-[[menu.main]]
-name       = "about"
-weight     = 100
-identifier = "about"
-url        = "/about.html"
+[params.social]
+blog     = "/blog"
+github   = "https://www.github.com/jkoelndorfer"
+linkedin = "https://www.linkedin.com/in/jkoelndorfer"
+email    = "john@johnk.io"
 
 [[menu.main]]
 name       = "blog"
-weight     = "200"
+weight     = "100"
 identifier = "blog"
 url        = "/blog.html"

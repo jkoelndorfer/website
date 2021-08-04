@@ -1,0 +1,70 @@
+/* This is a stripped-down, minimal version of the CSS included with Font Awesome.
+ *
+ * Font Awesome's included CSS is quite large and includes a lot that I don't
+ * actually need.
+ *
+ * See: https://fontawesome.com/
+ */
+
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("/fonts/fa-regular-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("/fonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fa, .fas, .fab {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fas {
+    font-weight: 900;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.fa-book:before {
+    content: "\f02d";
+}
+
+.fa-envelope:before {
+    content: "\f0e0";
+}
+
+.fa-github:before {
+    content: "\f09b";
+}
+
+.fa-linkedin:before {
+    content: "\f08c";
+}

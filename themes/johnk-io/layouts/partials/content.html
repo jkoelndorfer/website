@@ -1,0 +1,23 @@
+<div id="blog-post">
+    <header>
+      <h1 id="blog-post-title">{{ .Title }}</h1>
+    </header>
+    <div class="blog-post-meta">
+        {{ if not .Date.IsZero }}<p class="blog-post-date">Published on {{ .Date.Format .Site.Params.dateformat }}</p>{{ end }}
+        <p class="blog-post-tags">
+          {{ if isset .Params "tags" }}
+              tags:
+              {{ $total := len .Params.tags }}
+              {{ if gt $total 0 }}
+                  {{ $subtotal := sub $total 1 }}
+                  {{ range $i, $tag := sort $.Params.tags }}
+                      <a class="tag" href="{{ "/tags/" | relURL }}{{ $tag | urlize }}.html">{{ $tag }}</a>{{ if lt $i $subtotal }}, {{ end }}
+                  {{ end }}
+              {{ end }}
+          {{ end }}
+        </p>
+    </div>
+    <section id="blog-post-content">
+        {{ .Content }}
+    </section>
+</div>
