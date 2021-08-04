@@ -12,7 +12,7 @@ PygmentsCodeFences = true
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
-description = "Senior Software Developer @ [AerisWeather](https://www.aerisweather.com)"
+description = "Site Reliability Engineer @ [AerisWeather](https://www.aerisweather.com)"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
 
