@@ -1,0 +1,32 @@
+<div id="blog-post-list-container">
+    <header id="blog-post-list-header">
+        <h1>Blog Posts | johnk.io</h1>
+    </header>
+    <section>
+        <ul class="blog-post-list">
+            {{ range .Data.Pages.ByPublishDate.Reverse }}
+            <li class="blog-post-list-entry">
+                <div class="blog-post-link"><h2 class="blog-post-link"><a class="blog-post-link" href="{{ .Permalink }}">{{ .Title }}</a></h2></div>
+                <div class="blog-post-meta">
+                {{ if not .Date.IsZero }}<p class="blog-post-date">Published on {{ .Date.Format .Site.Params.dateformat | upper }}</p>{{end}}
+                <p class="blog-post-tags">
+                    {{ if isset .Params "tags" }}
+                        {{ $total := len .Params.tags }}
+                        {{ if gt $total 0 }}
+                            tags:
+                            {{ $total := sub $total 1 }}
+                            {{ range $i, $cat := sort .Params.tags }}
+                    <a class="category" href="{{ "/tags/" | relURL }}{{ $cat | humanize | urlize }}.html">{{ $cat }}</a>{{ if lt $i $total }}, {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </p>
+                </div>
+                <p class="blog-post-description">
+                {{ .Description }}
+                </p>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+</div>
