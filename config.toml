@@ -21,6 +21,9 @@ github   = "jkoelndorfer"
 linkedin = "jkoelndorfer"
 email    = "jkoelndorfer@gmail.com"
 
+[params.meta]
+keywords = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
+
 [[menu.main]]
 name       = "about"
 weight     = 100
