@@ -281,5 +281,5 @@ out to me via [e-mail][9] or [LinkedIn][10].
 [6]: https://docs.ansible.com/ansible/latest/user_guide/guide_rolling_upgrade.html#the-rolling-upgrade
 [7]: https://www.packer.io
 [8]: https://www.packer.io/docs/builders/amazon-ebs.html
-[9]: mailto:jkoelndorfer@gmail.com
-[10]: https://www.linkedin.com/in/jkoelndorfer
+[9]: mailto:{{< param Social.email >}}
+[10]: {{< param Social.linkedin >}}

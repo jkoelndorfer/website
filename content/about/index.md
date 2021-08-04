@@ -3,8 +3,6 @@ title: About Me
 draft: false
 ---
 
-{{<div class="personal-photo-crop">}}{{<figure src="img/personalphoto.jpg">}}{{</div>}}
-
 My name is John, though often I go by "JK". I am a born and raised Minnesota native
 living in the west Twin Cities metro area. I've been here my whole life.
 
