@@ -2,41 +2,46 @@
 /* Karma */
 /*********/
 @font-face {
-    font-family: Karma;
-    font-style:  normal;
-    font-weight: 300;
+    font-family:  Karma;
+    font-style:   normal;
+    font-weight:  300;
+    font-display: swap;
 
     src: url(/fonts/Karma-Light.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Karma;
-    font-style:  normal;
-    font-weight: 400;
+    font-family:  Karma;
+    font-style:   normal;
+    font-weight:  400;
+    font-display: swap;
 
     src: url(/fonts/Karma-Regular.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Karma;
-    font-style:  normal;
-    font-weight: 500;
+    font-family:  Karma;
+    font-style:   normal;
+    font-weight:  500;
+    font-display: swap;
 
     src: url(/fonts/Karma-Medium.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Karma;
-    font-style:  normal;
-    font-weight: 600;
+    font-family:  Karma;
+    font-style:   normal;
+    font-weight:  600;
+    font-display: swap;
 
     src: url(/fonts/Karma-SemiBold.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Karma;
-    font-style:  normal;
-    font-weight: 700;
+    font-family:  Karma;
+    font-style:   normal;
+    font-weight:  700;
+    font-display: swap;
 
     src: url(/fonts/Karma-Bold.woff2) format("woff2");
 }
@@ -45,33 +50,37 @@
 /* Noto Sans */
 /*************/
 @font-face {
-    font-family: Noto Sans;
-    font-style:  normal;
-    font-weight: normal;
+    font-family:  Noto Sans;
+    font-style:   normal;
+    font-weight:  normal;
+    font-display: swap;
 
     src: url(/fonts/NotoSans-Regular.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Noto Sans;
-    font-style:  italic;
-    font-weight: normal;
+    font-family:  Noto Sans;
+    font-style:   italic;
+    font-weight:  normal;
+    font-display: swap;
 
     src: url(/fonts/NotoSans-Italic.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Noto Sans;
-    font-style:  normal;
-    font-weight: bold;
+    font-family:  Noto Sans;
+    font-style:   normal;
+    font-weight:  bold;
+    font-display: swap;
 
     src: url(/fonts/NotoSans-Bold.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: Noto Sans;
-    font-style:  italic;
-    font-weight: bold;
+    font-family:  Noto Sans;
+    font-style:   italic;
+    font-weight:  bold;
+    font-display: swap;
 
     src: url(/fonts/NotoSans-BoldItalic.woff2) format("woff2");
 }
