@@ -8,13 +8,13 @@
 
     <section id="author-social">
     {{ with .Site.Params.social.github }}
-    <a title="{{ $.Site.Params.author }}'s GitHub" href="{{ . }}" target="_blank"><span class="fab fa-github"></span></a>
+    <a title="{{ $.Site.Params.author }}'s GitHub" rel="noopener" href="{{ . }}" target="_blank"><span class="fab fa-github"></span></a>
     {{ end }}
     {{ with .Site.Params.social.linkedin }}
-    <a title="{{ $.Site.Params.author }}'s LinkedIn" href="{{ . }}/" target="_blank"><span class="fab fa-linkedin"></span></a>
+    <a title="{{ $.Site.Params.author }}'s LinkedIn" rel="noopener" href="{{ . }}/" target="_blank"><span class="fab fa-linkedin"></span></a>
     {{ end }}
     {{ with .Site.Params.social.email }}
-    <a title="E-mail {{ $.Site.Params.author }}" href="mailto:{{ . }}" target="_blank"><span class="fas fa-envelope"></span></a>
+    <a title="E-mail {{ $.Site.Params.author }}" rel="noopener" href="mailto:{{ . }}" target="_blank"><span class="fas fa-envelope"></span></a>
     {{ end }}
     {{ with .Site.Params.social.blog }}
     <a title="{{ $.Site.Params.author }}'s Blog" href="/blog.html"><span class="fas fa-book"></span></a>
