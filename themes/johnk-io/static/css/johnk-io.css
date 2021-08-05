@@ -4,8 +4,8 @@
 :root {
     --background: #f9f9f9;
     --code-background: #f0f0f0;
-    --base-text-color: #555555;
-    --deemphasized-text-color: #888888;
+    --base-text-color: #333333;
+    --deemphasized-text-color: #666666;
 
     --link-color: #526dba;
     --link-hover-color: #526dfa;
