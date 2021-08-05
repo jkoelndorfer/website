@@ -17,7 +17,8 @@ dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
 
 [params.meta]
-keywords = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
+description = "The personal website of John Koelndorfer."
+keywords    = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
 
 [params.social]
 blog     = "/blog"
