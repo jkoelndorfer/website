@@ -63,7 +63,7 @@ h2 {
  ***************/
 #author-banner {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 0px;
 }
 
 #author-photo {
@@ -102,14 +102,14 @@ h2 {
     font-size: 1.00em;
     color: var(--deemphasized-text-color);
 
-    margin-bottom: -0.4em;
+    margin-bottom: 0px;
 }
 
 #author-banner #author-description {
+    font-family: Noto Sans;
     font-size: 0.90em;
     color: var(--deemphasized-text-color);
-
-    margin-bottom: -2.2em;
+    margin-bottom: 4px;
 }
 
 #author-social {
