@@ -19,6 +19,9 @@
     {{ with .Site.Params.social.blog }}
     <a title="{{ $.Site.Params.author }}'s Blog" href="{{ . }}"><span class="fas fa-book"></span></a>
     {{ end }}
+    {{ with .Site.Params.resume }}
+    <a title="{{ $.Site.Params.author }}'s Resume" href="{{ . }}"><span class="fas fa-file-alt"></span></a>
+    {{ end }}
     </section>
 
     {{ with .Site.GetPage "about/index.md" }}

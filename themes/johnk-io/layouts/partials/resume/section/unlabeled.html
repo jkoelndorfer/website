@@ -1,0 +1,5 @@
+<section id="resume-{{ lower (.section) }}" class="resume-unlabeled-section">
+    <div class="resume-section-content">
+        {{ (.ctx.Site.GetPage (printf "%s/%s.md" (.ctx.Params.content) (lower .section))).Content }}
+    </div>
+</section>

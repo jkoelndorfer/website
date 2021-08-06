@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<!--
+
+    This file needs to exist to prevent these errors from hugo:
+
+        WARN 2021/09/01 12:23:43 found no layout file for "HTML" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+
+    These errors seem to appear despite the fact that this template
+    file is never used.
+
+-->
+<h1>Oops!</h1>
+
+<p>
+You're seeing this page because there was a snafu with
+my static site generator, <a href="https://gohugo.io">hugo</a>.
+</p>
+
+<p>
+Please <a href="mailto:{{ .Site.Params.social.email }}">e-mail me</a>
+if you see this page. After you've done that, <a href="/">go back</a>.
+</p>
+{{ partial "footer.html" . }}
