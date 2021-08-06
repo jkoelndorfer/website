@@ -141,11 +141,11 @@ h2 {
 }
 
 .blog-post-list-entry {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .blog-post-link {
-    margin-bottom: -0.25em;
+    margin-bottom: 0em;
 }
 
 .blog-post-meta p {
@@ -165,7 +165,7 @@ h2 {
 
 .blog-post-description {
     color: var(--base-text-color);
-    margin-top: 0.25em;
+    margin-top: 0.5em;
 }
 
 /*******************
