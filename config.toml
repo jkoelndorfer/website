@@ -15,6 +15,7 @@ intro       = "Technologist and purveyor of fine automation"
 description = "Site Reliability Engineer @ [AerisWeather](https://www.aerisweather.com)"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
+resume      = "/resume.html"
 
 [params.meta]
 description = "The personal website of John Koelndorfer."
@@ -31,3 +32,9 @@ name       = "blog"
 weight     = "100"
 identifier = "blog"
 url        = "/blog.html"
+
+[[menu.main]]
+name       = "resume"
+weight     = "200"
+identifier = "resume"
+url        = "/resume.html"
