@@ -21,7 +21,7 @@ description = "The personal website of John Koelndorfer."
 keywords    = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
 
 [params.social]
-blog     = "/blog"
+blog     = "/blog.html"
 github   = "https://www.github.com/jkoelndorfer"
 linkedin = "https://www.linkedin.com/in/jkoelndorfer"
 email    = "john@johnk.io"

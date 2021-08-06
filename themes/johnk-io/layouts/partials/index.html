@@ -17,7 +17,7 @@
     <a title="E-mail {{ $.Site.Params.author }}" rel="noopener" href="mailto:{{ . }}" target="_blank"><span class="fas fa-envelope"></span></a>
     {{ end }}
     {{ with .Site.Params.social.blog }}
-    <a title="{{ $.Site.Params.author }}'s Blog" href="/blog.html"><span class="fas fa-book"></span></a>
+    <a title="{{ $.Site.Params.author }}'s Blog" href="{{ . }}"><span class="fas fa-book"></span></a>
     {{ end }}
     </section>
 
