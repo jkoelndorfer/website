@@ -2,14 +2,18 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
+{{ if and (eq .Kind "term") (eq (index .Data.Pages 0).Type "blog") }}
+<title>Blog Posts | {{ .Title }} | johnk.io</title>
+{{ else }}
 <title>{{ .Title }} | johnk.io</title>
+{{ end }}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-{{ with .Site.Params.meta.description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ with .Site.Params.meta.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+<meta name="description" content="{{ default .Site.Params.meta.description .Description }}">
+<meta name="keywords" content="{{ default .Site.Params.meta.keywords .Keywords }}">
 
 {{ hugo.Generator }}
 {{ hugo.BuildDate }}

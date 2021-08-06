@@ -1,6 +1,10 @@
 <div id="blog-post-list-container">
     <header id="blog-post-list-header">
+        {{ if eq .Kind "term" }}
+        <h1>Blog Posts | {{ .Title }} | johnk.io</h1>
+        {{ else }}
         <h1>Blog Posts | johnk.io</h1>
+        {{ end}}
     </header>
     <section>
         <ul class="blog-post-list">
