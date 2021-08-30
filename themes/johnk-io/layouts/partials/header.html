@@ -2,11 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
-{{ if and (eq .Kind "term") (eq (index .Data.Pages 0).Type "blog") }}
-<title>Blog Posts | {{ .Title }} | johnk.io</title>
-{{ else }}
 <title>{{ .Title }} | johnk.io</title>
-{{ end }}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
