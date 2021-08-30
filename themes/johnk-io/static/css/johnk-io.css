@@ -4,6 +4,7 @@
 :root {
     --background: #f9f9f9;
     --code-background: #f0f0f0;
+    --blockquote-highlight: #d0d0d0;
     --base-text-color: #333333;
     --deemphasized-text-color: #666666;
 
@@ -190,4 +191,9 @@ pre {
 
 code, pre {
     background-color: var(--code-background);
+}
+
+blockquote {
+    border-left: 2px solid var(--blockquote-highlight);
+    padding-left: 1em;
 }
