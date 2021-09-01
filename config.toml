@@ -9,6 +9,9 @@ uglyURLs     = true
 PygmentsUseClasses = true
 PygmentsCodeFences = true
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
@@ -26,6 +29,7 @@ blog     = "/blog.html"
 github   = "https://www.github.com/jkoelndorfer"
 linkedin = "https://www.linkedin.com/in/jkoelndorfer"
 email    = "john@johnk.io"
+website  = "https://www.johnk.io"
 
 [[menu.main]]
 name       = "blog"

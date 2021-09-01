@@ -1,0 +1,48 @@
+{{ partial "header.html" . }}
+
+<div id="resume">
+    <section id="resume-header" class="resume-unlabeled-section">
+    {{ (.Site.GetPage "resume/header.md").Content }}
+    </section>
+    <section id="resume-summary" class="resume-labeled-section">
+        <h2 class="resume-section-label">Summary</h2>
+        <div class="resume-section-content">
+            {{ (.Site.GetPage "resume/summary.md").Content }}
+        </div>
+    </section>
+    <section id="resume-skills" class="resume-labeled-section">
+        <h2 class="resume-section-label">Skills</h2>
+        <div class="resume-section-content">
+            {{ (.Site.GetPage "resume/skills.md").Content }}
+        </div>
+    </section>
+    {{ $experienceBundle := .Site.GetPage "/resume/experience" }}
+    {{ $experiencePages := $experienceBundle.Pages }}
+    {{ $experienceDateFmt := "Jan 2006" }}
+    <section id="resume-experience" class="resume-labeled-section">
+        <h2 class="resume-section-label">Experience</h2>
+        <div class="resume-section-content">
+            {{ range sort $experiencePages "Params.index" "desc" }}
+            <div class="resume-experience-item">
+                <div class="resume-experience-item-headline">
+                    <span class="resume-experience-item-title-org">{{ .Title }} @ {{ .Params.organization }}</span>
+                    <span class="resume-experience-item-date-range">
+                        {{ time.Format $experienceDateFmt .Params.startdate }}
+                        &mdash;
+                        {{ if eq .Params.enddate "Present" }}
+                            Present
+                        {{ else }}
+                            {{ time.Format $experienceDateFmt .Params.enddate }}
+                        {{ end }}
+                    </span>
+                </div>
+                <div class="resume-experience-item-description">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </section>
+</div>
+
+{{ partial "footer.html" . }}
