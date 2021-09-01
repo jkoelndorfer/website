@@ -70,6 +70,10 @@ h2 {
     font-size: 1.2em;
 }
 
+.back-link {
+    text-align: center;
+}
+
 @media print {
     /* These (hopefully?) help avoid an empty final page when printing via Chrome. */
     html, body {
@@ -81,6 +85,10 @@ h2 {
     }
 
     .noprint {
+        visibility: hidden;
+    }
+
+    .back-link {
         visibility: hidden;
     }
 }
