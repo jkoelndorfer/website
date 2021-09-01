@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eo pipefail
+env=$1
+
+script_dir=$(dirname "$(realpath "$0")")
+cd "$script_dir"
+
+rm -rf 'public/'
+hugo --baseURL "$base_url"
+find 'public/' -name '*.xml' | grep -v blog | xargs rm -f
+rm -rf 'public/resume' 'public/resume-content'
