@@ -32,6 +32,12 @@ body {
     justify-content: center;
 }
 
+@media print {
+    body {
+        margin-top: 0;
+    }
+}
+
 #root-container {
     width: 40em;
 }

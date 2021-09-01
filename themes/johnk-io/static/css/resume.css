@@ -2,6 +2,12 @@
     margin-bottom: 2em;
 }
 
+@media print {
+    #resume > section {
+        margin-bottom: 1em;
+    }
+}
+
 #resume h2 {
     font-size: 1.1em;
 }
