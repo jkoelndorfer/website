@@ -22,6 +22,6 @@ source common.sh
 ./build
 cd public
 aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
-s3_base_path="s3://$aws_account_id-blog-$env"
+s3_base_path="s3://$aws_account_id-website-$env"
 aws s3 sync --acl public-read --delete . "$s3_base_path"
 set_cache_control_max_age "$s3_base_path/fonts/"
