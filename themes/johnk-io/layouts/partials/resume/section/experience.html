@@ -1,0 +1,28 @@
+{{ $experienceBundle := .ctx.Site.GetPage (printf "%s/experience" .ctx.Params.content) }}
+{{ $experiencePages := $experienceBundle.Pages }}
+{{ $experienceDateFmt := "Jan 2006" }}
+<section id="resume-experience" class="resume-labeled-section">
+    <h2 class="resume-section-label">{{ title .section }}</h2>
+    <div class="resume-section-content">
+        {{ range sort $experiencePages "Params.index" "desc" }}
+        <div class="resume-experience-item">
+            <div class="resume-experience-item-headline">
+                <div class="resume-experience-item-title">{{ .Title }}</div>
+                <div class="resume-experience-item-org">{{ .Params.organization }}</div>
+                <div class="resume-experience-item-date-range">
+                    {{ time.Format $experienceDateFmt .Params.startdate }}
+                    &mdash;
+                    {{ if eq .Params.enddate "Present" }}
+                        Present
+                    {{ else }}
+                        {{ time.Format $experienceDateFmt .Params.enddate }}
+                    {{ end }}
+                </div>
+            </div>
+            <div class="resume-experience-item-description">
+                {{ .Content }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>

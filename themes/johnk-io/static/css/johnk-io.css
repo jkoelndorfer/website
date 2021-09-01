@@ -16,15 +16,26 @@
  * Global *
  **********/
 
+@media screen {
+    body {
+        background-color: var(--background);
+    }
+}
+
 body {
     color: var(--base-text-color);
     font-family: Noto Sans;
-    background-color: var(--background);
 
     margin-top: 30px;
 
     display: flex;
     justify-content: center;
+}
+
+@media print {
+    body {
+        margin-top: 0;
+    }
 }
 
 #root-container {
@@ -57,6 +68,21 @@ h1 {
 
 h2 {
     font-size: 1.2em;
+}
+
+@media print {
+    /* These (hopefully?) help avoid an empty final page when printing via Chrome. */
+    html, body {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+
+        break-after: avoid-page;
+        break-before: avoid-page;
+    }
+
+    .noprint {
+        visibility: hidden;
+    }
 }
 
 /***************

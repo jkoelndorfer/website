@@ -1,6 +1,7 @@
 ---
 title: About Me
 draft: false
+headless: true
 ---
 
 My name is John, though often I go by "JK". I am a born and raised Minnesota native

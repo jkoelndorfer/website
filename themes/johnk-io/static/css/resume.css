@@ -1,0 +1,138 @@
+#resume > section {
+    margin-bottom: 2em;
+}
+
+@media print {
+    #resume > section {
+        margin-bottom: 1em;
+    }
+}
+
+#resume h2 {
+    font-size: 1.1em;
+}
+
+#resume-header {
+    text-align: center;
+}
+
+#resume-header > * {
+    margin: 0 0 0 0;
+}
+
+#resume-skills ul {
+    padding-left: 0;
+}
+
+.resume-labeled-section {
+    display: flex;
+    width: 100%;
+
+    break-inside: avoid-page;
+}
+
+#resume-experience {
+    break-inside: auto;
+}
+
+.resume-unlabeled-section {
+    width: 100%;
+}
+
+.resume-section-label, .resume-section-content {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+    break-inside: avoid-page;
+}
+
+.resume-experience-item {
+    break-inside: avoid-page;
+}
+
+.resume-section-label {
+    width: 20%;
+    margin-right: 1em;
+
+    font-weight: bold;
+}
+
+.resume-section-content {
+    width: 85%;
+}
+
+@media (max-width: 30em) {
+    /* Put resume section labels on their own line on small devices
+     * to conserve horizontal space. */
+    .resume-labeled-section {
+        display: block;
+    }
+
+    .resume-section-label, .resume-section-content {
+        width: 100%;
+    }
+}
+
+.resume-section-content * {
+    /* Margin and padding will be set on outer containers. */
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#resume-skills li {
+    width: 8em;
+    margin-right: 1em;
+    display: inline-block;
+}
+
+@media (max-width: 32em) {
+    #resume-skills li {
+        width: 5em;
+    }
+}
+
+.resume-experience-item {
+    margin-bottom: 1em;
+}
+
+.resume-experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.resume-experience-item-title, .resume-experience-item-org {
+    float: left;
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.resume-experience-item-org {
+    clear: left;
+}
+
+.resume-experience-item-date-range {
+    float: right;
+    text-align: right;
+    font-weight: bold;
+    font-size: .8em;
+}
+
+.resume-experience-item-description {
+    clear: both;
+    font-size: .8em;
+}
+
+.resume-experience-item-description ul {
+    justify-items: start;
+    padding-left: 2em;
+}
+
+#resume-publications .resume-section-content {
+    font-size: .8em;
+}
+
+#resume-publications .resume-section-content ul {
+    padding-left: 2em;
+}

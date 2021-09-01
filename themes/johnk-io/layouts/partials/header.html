@@ -19,6 +19,9 @@
 <link rel="stylesheet" href="{{ "/css/fonts.css" }}">
 <link rel="stylesheet" href="{{ "/css/syntax-highlighting.css" }}">
 <link rel="stylesheet" href="{{ "/css/johnk-io.css" }}">
+{{ if eq .Type "resume" }}
+<link rel="stylesheet" href="{{ "/css/resume.css" }}">
+{{ end }}
 </head>
 <body lang="{{ .Site.LanguageCode }}">
 <div id="root-container">

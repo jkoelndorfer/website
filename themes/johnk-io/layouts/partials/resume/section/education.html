@@ -1,0 +1,21 @@
+{{ $educationBundle := .ctx.Site.GetPage (printf "%s/education" .ctx.Params.content) }}
+{{ $educationPages := $educationBundle.Pages }}
+{{ $educationDateFmt := "2006" }}
+<section id="resume-education" class="resume-labeled-section">
+    <h2 class="resume-section-label">{{ title .section }}</h2>
+    <div class="resume-section-content">
+        {{ range sort $educationPages "Params.index" "desc" }}
+        <div class="resume-experience-item">
+            <div class="resume-experience-item-headline">
+                <div class="resume-experience-item-org">{{ .Params.institution }}</div>
+                <div class="resume-experience-item-date-range">
+                    {{ time.Format $educationDateFmt .Params.graddate }}
+                </div>
+            </div>
+            <div class="resume-experience-item-description">
+                {{ .Params.degree }}, {{ .Params.field }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
