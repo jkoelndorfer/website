@@ -19,6 +19,7 @@ cd "$script_dir"
 
 source common.sh
 
+rm -rf public
 ./build
 cd public
 aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
