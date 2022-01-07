@@ -1,2 +1,4 @@
 # Ignore website generated content
 public/
+
+.hugo_build.lock
