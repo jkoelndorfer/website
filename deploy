@@ -23,5 +23,8 @@ source common.sh
 cd public
 aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
 s3_base_path="s3://$aws_account_id-website-$env"
+s3_addl_assets_path="s3://$aws_account_id-website-addl-assets-$env"
+
 aws s3 sync --acl public-read --delete . "$s3_base_path"
+aws s3 cp --acl public-read --recursive "$s3_addl_assets_path" "$s3_base_path"
 set_cache_control_max_age "$s3_base_path/fonts/"
