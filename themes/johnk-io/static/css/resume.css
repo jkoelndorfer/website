@@ -1,8 +1,18 @@
+#resume {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #resume > section {
     margin-bottom: 2em;
+    display: block;
 }
 
 @media print {
+    #resume {
+        width: 80%;
+    }
+
     #resume > section {
         margin-bottom: 1em;
     }
@@ -12,7 +22,7 @@
     font-size: 1.1em;
 }
 
-#resume-header {
+#resume-header > .resume-section-content {
     text-align: center;
 }
 
@@ -21,29 +31,28 @@
 }
 
 #resume-skills ul {
-    padding-left: 0;
+    padding: 0 0 0 0;
 }
 
 .resume-labeled-section {
-    display: flex;
     width: 100%;
 
     break-inside: avoid-page;
 }
 
-#resume-experience {
-    break-inside: auto;
-}
-
 .resume-unlabeled-section {
     width: 100%;
+
+    break-inside: avoid-page;
 }
 
 .resume-section-label, .resume-section-content {
     padding: 0 0 0 0;
     margin: 0 0 0 0;
+}
 
-    break-inside: avoid-page;
+#resume-experience {
+    break-inside: auto;
 }
 
 .resume-experience-item {
@@ -58,19 +67,7 @@
 }
 
 .resume-section-content {
-    width: 85%;
-}
-
-@media (max-width: 30em) {
-    /* Put resume section labels on their own line on small devices
-     * to conserve horizontal space. */
-    .resume-labeled-section {
-        display: block;
-    }
-
-    .resume-section-label, .resume-section-content {
-        width: 100%;
-    }
+    width: 100%;
 }
 
 .resume-section-content * {
@@ -82,10 +79,18 @@
     padding-bottom: 0;
 }
 
+#resume-skills ul {
+    width: 100%;
+    margin-left: 4em;
+    margin-right 4em;
+    margin-bottom: 0;
+}
+
 #resume-skills li {
-    width: 8em;
-    margin-right: 1em;
+    width: 30%;
     display: inline-block;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 }
 
 @media (max-width: 32em) {
@@ -96,6 +101,7 @@
 
 .resume-experience-item {
     margin-bottom: 1em;
+    overflow: hidden;
 }
 
 .resume-experience-item:last-child {
@@ -135,4 +141,26 @@
 
 #resume-publications .resume-section-content ul {
     padding-left: 2em;
+}
+
+@media (max-width: 30em) {
+    .resume-section-label, .resume-section-content {
+        text-align: justify;
+        width: 100%;
+    }
+
+    #resume-skills li {
+        width: 33%;
+    }
+
+    #resume-skills ul {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+@media (max-width: 20em) {
+    #resume-skills li {
+        width: 45%;
+    }
 }
