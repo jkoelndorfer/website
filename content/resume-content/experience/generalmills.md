@@ -12,8 +12,7 @@ index: 2
   storage controllers.
 * Managed three fiber networks composed of a total of six Brocade switches.
 * Maintained 16 VMware hosts across four clusters.
-* Worked with colleagues to identify processes that could benefit from automation using
-  Microsoft Service Management Automation (SMA).
+* Designed self-service automation for IT processes.
 * Supported infrastructure security technologies including web content filtering,
   endpoint antivirus, VPN, internal and external-facing firewalls, and security
   information and event management (SIEM).
