@@ -17,8 +17,6 @@ index: 8
   in 2021, even through multiple widespread AWS outages.
 * Built AerisWeather's webhooks product in under six months,
   which grew to over $200,000 ARR in 2021.
-* Implemented Sensu and integrated with PagerDuty to provide
-  monitoring and alerting for AerisWeather resources.
 * Diagnosed and remediated infrastructure incidents.
 * Managed office network.
 * Provided IT support to about 15 employees on an as-needed basis.
