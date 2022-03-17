@@ -8,5 +8,5 @@
 * Terraform
 * Networking
 * Security
-* Bash
 * Automation
+* Containerization
