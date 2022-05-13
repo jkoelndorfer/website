@@ -15,7 +15,7 @@ unsafe = true
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
-description = "Site Reliability Engineer @ [AerisWeather](https://www.aerisweather.com)"
+description = "Lead Infrastructure Engineer @ [BigCommerce](https://www.bigcommerce.com/)"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
 resume      = "/resume.html"
