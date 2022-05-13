@@ -16,8 +16,8 @@ overseeing cloud infrastructure and maintaining our [webhooks][2] product.
 Dialing in a shot of espresso and mastering the art of the pour over bring
 me joy. I'm also fond of technical side projects, where I am free
 to prioritize engineering excellence. You may also find me drafting a
-[blog][3] post, playing video games, working on various home improvement projects,
-or just spending time with my lovely partner, Val, and my cat baby, Darla.
+[blog][3] post, playing video games, working on various home improvement
+projects or spending time with my family.
 
 If you're an old friend or someone looking for some light consulting,
 please [reach out][4]. I would love to hear from you.
