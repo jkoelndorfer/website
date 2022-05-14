@@ -2,7 +2,7 @@
 title: Senior Site Reliability Engineer
 organization: AerisWeather
 startdate: 2019-01-01
-enddate: Present
+enddate: 2022-05-13
 index: 8
 ---
 
