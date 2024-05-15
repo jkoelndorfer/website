@@ -72,3 +72,11 @@
 .fa-file-alt:before {
     content: "\f15c";
 }
+
+.fa-globe:before {
+    content: "\f0ac";
+}
+
+.fa-phone:before {
+    content: "\f095";
+}
