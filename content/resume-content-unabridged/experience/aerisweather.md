@@ -6,7 +6,7 @@ enddate: 2022-05-13
 index: 8
 ---
 
-* Lead AerisWeather's cloud infrastructure & DevOps strategy.
+* Lead AerisWeather's cloud infrastructure & DevOps strategy on AWS.
 * Provided guidance and mentorship in infrastructure & DevOps best practices.
 * Spearheaded AWS cost savings project, resulting in more
   than $100,000 in savings per year and driving product margins
