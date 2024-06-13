@@ -36,9 +36,8 @@
     width: auto;
 }
 
-.resume-contact-label {
-    float: left;
-    padding-right: 1em;
+.resume-contact-label:not(:first-child) {
+    padding-left: 1em;
 }
 
 .resume-contact-detail {

@@ -16,6 +16,7 @@ unsafe = true
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
 description = "Lead Infrastructure Engineer @ [BigCommerce](https://www.bigcommerce.com/)"
+location    = "Minnetonka, MN"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
 resume      = "/resume.html"
@@ -25,11 +26,14 @@ description = "The personal website of John Koelndorfer."
 keywords    = "Koelndorfer, Technology, DevOps, Software, Engineering, Blog"
 
 [params.social]
-blog     = "/blog.html"
-github   = "https://www.github.com/jkoelndorfer"
-linkedin = "https://www.linkedin.com/in/jkoelndorfer"
-email    = "john@johnk.io"
-website  = "https://www.johnk.io"
+blog           = "/blog.html"
+github         = "https://www.github.com/jkoelndorfer"
+github_short   = "github.com/jkoelndorfer"
+linkedin       = "https://www.linkedin.com/in/jkoelndorfer"
+linkedin_short = "linkedin.com/in/jkoelndorfer"
+email          = "john@johnk.io"
+website        = "https://www.johnk.io"
+website_short  = "johnk.io"
 
 [[menu.main]]
 name       = "blog"
