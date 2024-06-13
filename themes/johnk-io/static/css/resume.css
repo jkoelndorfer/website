@@ -34,22 +34,21 @@
     margin-left: auto;
     margin-right: auto;
     width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.resume-contact-label:not(:first-child) {
-    padding-left: 1em;
+.resume-contact-label {
+  float: left;
+  width: 2em;
 }
 
 .resume-contact-detail {
-    float: left;
+  float: left;
 }
 
 #resume-summary p {
     text-align: justify;
-}
-
-#resume-skills ul {
-    padding: 0 0 0 0;
 }
 
 .resume-labeled-section {
@@ -98,22 +97,29 @@
 }
 
 #resume-skills ul {
-    width: 100%;
-    margin-left: 4em;
-    margin-right 4em;
-    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    padding-left: 10%;
+}
+
+#resume-skills .resume-section-content {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #resume-skills li {
-    width: 30%;
     display: inline-block;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
 }
 
 @media (max-width: 32em) {
-    #resume-skills li {
-        width: 5em;
+    #resume-contact {
+      grid-template-columns: 1fr;
+    }
+
+    #resume-skills ul {
+      grid-template-columns: 1fr 1fr;
+      padding-left: 5%;
     }
 }
 
@@ -172,8 +178,8 @@
     }
 
     #resume-skills ul {
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: .5em;
+        margin-right: .51em;
     }
 }
 
