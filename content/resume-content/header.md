@@ -15,11 +15,19 @@
         <a href="mailto:{{< param social.email >}}">{{< param social.email >}}</a>
       </td>
     </tr>
-    <tr>
+    <tr class="resume-contact-line">
       <td class="resume-contact-label"><span class="fab fa-github"></span></td>
       <td class="resume-contact-detail">
         <a href="{{< param social.github >}}">{{< param social.github_short >}}</a>
       </td>
+      <td class="resume-contact-label"><span class="fab fa-linkedin"></span></td>
+      <td class="resume-contact-detail">
+        <a href="{{< param social.linkedin >}}">{{< param social.linkedin_short >}}</a>
+      </td>
+    </tr>
+    <tr class="resume-contact-line">
+      <td class="resume-contact-label"><span class="fas fa-envelope"></span></td>
+      <td class="resume-contact-detail"><a href="mailto:{{< param social.email >}}">{{< param social.email >}}</a></td>
       <td class="resume-contact-label"><span class="fas fa-location-dot"></span></td>
       <td class="resume-contact-detail">{{< param location >}}</td>
     </tr>
