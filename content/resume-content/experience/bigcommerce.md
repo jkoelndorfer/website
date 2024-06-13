@@ -6,10 +6,9 @@ enddate: Present
 index: 8
 ---
 
-* Maintained Google Cloud Platform-powered cloud development environment,
-  enabling engineers to run a scaled-down version of BigCommerce's
-  service platform, composed of over 40 distinct services.
-* Provided technical support to approximately 250 software engineers.
+* Led team responsible for Google Cloud Platform-powered cloud development
+  environment, enabling over 200 engineers to run a scaled-down version of
+  BigCommerce's 40+ service platform.
 * Implemented cloud development improvements that reduced engineer
   troubleshooting time from over 300 employee-days per year to less
   than 30 employee-days per year.
@@ -17,4 +16,3 @@ index: 8
 * Built out BigCommerce's "AI Labs" infrastructure from zero in just
   three days, enabling developers to securely deploy internal apps to Kubernetes
   with CI.
-* Architected next-generation cloud development environment.

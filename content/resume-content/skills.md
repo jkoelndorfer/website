@@ -5,8 +5,11 @@
 * DevOps
 * Python
 * AWS
+* GCP
+* Docker
+* Kubernetes
 * Terraform
 * Networking
 * Security
 * Automation
-* Containerization
+* Shell
