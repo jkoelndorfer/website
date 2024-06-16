@@ -6,10 +6,11 @@ enddate: 2018-03-16
 index: 6
 ---
 
-* Designed and implemented automated Python test suite running 300+ tests
+* Designed and implemented automated Python tests running 300+ tests
   per day on 10+ models of Calix residential network hardware.
-* Reviewed junior developers’ code changes to automated test suite.
-* Provided guidance in Python best practices for Calix community.
-* Maintained 25 Linux-based systems that simulate LAN and WAN network traffic for
-  automated tests.
-* Diagnosed test failures and reported bugs as appropriate.
+* Unified test codebases by implementing a driver pattern, resulting in
+  accelerated feature development, improved reliability, lowered maintenance
+  cost, and enhanced troubleshooting capabilities.
+* Architected and implemented ONT image signing service to enable secure updates
+  for residential network hardware in the field.
+* Mentored junior developer in software engineering and testing best practices.

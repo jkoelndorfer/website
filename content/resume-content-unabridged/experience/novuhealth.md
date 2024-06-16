@@ -6,7 +6,9 @@ enddate: 2018-11-02
 index: 7
 ---
 
-* Managed AWS infrastructure supporting Novu's platform.
-* Revamped SFTP eligibility file delivery to increase performance more than 2x.
+* Designed and implemented infrastructure functionality for Novu's
+  AWS-hosted platform using Chef.
+* Revamped SFTP eligibility file delivery service, increasing performance by
+  more than 2x.
 * Containerized and deployed MicroStrategy business intelligence tool to Amazon ECS.
-* Served as tier 3 support for the Novu platform.
+* Served as tier 3 on-call support for the Novu infrastructure.

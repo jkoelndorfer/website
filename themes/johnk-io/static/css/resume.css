@@ -18,6 +18,14 @@
     }
 }
 
+#resume h1 {
+  margin-bottom: -0.25em;
+}
+
+#resume-summary {
+  margin-bottom: 0.5em;
+}
+
 #resume h2 {
     font-size: 1.1em;
 }
