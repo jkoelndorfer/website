@@ -1,4 +1,7 @@
 # Ignore website generated content
 public/
 
+# Ignore optional configuration.
+config/_default/*.toml
+
 .hugo_build.lock

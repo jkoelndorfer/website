@@ -15,7 +15,7 @@ index: 9
   of software engineering.
 * Launched BigCommerce's next-gen service mesh proxy, Envoy, in the cloud
   development environment.
-* Reduced cost of cloud development environment by 35% (over $200,000 per year)
+* Reduced cost of cloud development environment by 35% (over $200,000 per year).
 * Improved developer tooling reliability, reducing engineering time lost
   from more than 2400 FTE-hours/year to less than 240 FTE-hours/year.
 * Built fully Terraformed, secure, CI-deployable Kubernetes cluster in just
