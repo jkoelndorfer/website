@@ -1,0 +1,8 @@
+  {{- $name := (.Get 1) -}}
+  {{- $val := ($.Page.Param $name) -}}
+  {{- if $val -}}
+  <div class="resume-contact-pair">
+    <div class="resume-contact-label"><span class="{{ .Get 0 }}"></span></div>
+    <div class="resume-contact-detail">{{ $val }}</div>
+  </div>
+  {{- end -}}
