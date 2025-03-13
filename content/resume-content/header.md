@@ -31,4 +31,5 @@
     <div class="resume-contact-label"><span class="fas fa-location-dot"></span></div>
     <div class="resume-contact-detail">{{< param location >}}</div>
   </div>
+  {{< condl-contact "fas fa-phone" "social.phone" >}}
 </div>

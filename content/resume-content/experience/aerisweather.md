@@ -1,6 +1,6 @@
 ---
 title: Lead Infrastructure Engineer
-organization: AerisWeather
+organization: AerisWeather (Acquired by Vaisala)
 startdate: 2019-01-01
 enddate: 2022-05-13
 index: 8
