@@ -1,7 +1,7 @@
 ---
 ---
 <h1>{{< param Author >}}</h1>
-<div id="resume-summary">Technologist and purveyor of fine automation.</div>
+<div id="resume-summary">Skilled technologist and purveyor of fine automation</div>
 <div id="resume-contact">
   <div class="resume-contact-pair">
     <div class="resume-contact-label"><span class="fas fa-globe"></span></div>
