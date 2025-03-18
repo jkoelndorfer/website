@@ -20,5 +20,5 @@ index: 5
 * Identified and implemented solutions to internal technological challenges.
 * Designed utility to examine and apply application server configuration across
   multiple environments.
-* Lead project to perform penetration testing against the Zipnosis platform.
+* Led project to perform penetration testing against the Zipnosis platform.
 * Implemented JAMF Casper Suite to manage about 40 Apple laptops.

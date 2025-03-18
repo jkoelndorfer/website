@@ -14,7 +14,7 @@ index: 9
 * Reduced ongoing cost of cloud development environment by 35%.
 * Improved developer tooling reliability, reducing engineering time lost
   from more than 2400 FTE-hours/year to less than 240 FTE-hours/year.
-* Lead project to to revamp cloud development environment enabling horizontal
+* Led project to to revamp cloud development environment enabling horizontal
   scalability, additional functionality, further improvements to reliability and cost,
   and reducing cloud dev maintenance effort by significantly slashing codebase
   size.
