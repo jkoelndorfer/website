@@ -15,7 +15,7 @@ unsafe = true
 [params]
 author      = "John Koelndorfer"
 intro       = "Technologist and purveyor of fine automation"
-description = "Lead Infrastructure Engineer @ [BigCommerce](https://www.bigcommerce.com/)"
+description = "Lead Infrastructure Engineer"
 location    = "Minnetonka, MN"
 dateformat  = "2006-01-02"
 authorimage = "personalphoto.jpg"
