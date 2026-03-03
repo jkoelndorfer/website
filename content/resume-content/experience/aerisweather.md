@@ -13,11 +13,8 @@ index: 8
   provisioning to provide secure, cost-effective, highly available
   deployments by default, saving weeks in setup and maintenance effort
   per service.
-* Rolled out standard application monitoring, alerting, and observability
-  built on Sensu, PagerDuty, and AWS CloudWatch.
 * Built AerisWeather webhooks product using Python, AWS Lambda, SQS,
   and S3, which grew to over $200,000 annual recurring revenue in 2021.
 * Revamped pwsweather.com's data ingestion platform to improve reliability,
   enabling receipt of more than ten million weather station updates
   (over 100 million data points) every hour.
-* Mentored software engineers in infrastructure and cloud engineering.

@@ -13,4 +13,3 @@ index: 6
   cost, and enhanced troubleshooting capabilities.
 * Architected and implemented ONT image signing process to enable secure updates
   for residential network hardware in the field.
-* Mentored junior developer in software engineering and testing best practices.
