@@ -12,8 +12,8 @@
 <meta name="keywords" content="{{ default .Site.Params.meta.keywords (delimit .Keywords ", ") }}">
 
 {{ hugo.Generator }}
-{{ hugo.BuildDate }}
-{{ hugo.CommitHash }}
+<meta name="johnk:build-date" content="{{ hugo.BuildDate }}">
+<meta name="johnk:commit-hash" content="{{ hugo.CommitHash }}">
 
 <link rel="stylesheet" href="{{ "/css/font-awesome.css" }}">
 <link rel="stylesheet" href="{{ "/css/fonts.css" }}">
