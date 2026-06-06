@@ -18,7 +18,7 @@ intro       = "Technologist and purveyor of fine automation"
 description = "Lead Cloud Engineer"
 location    = "Minnetonka, MN"
 dateformat  = "2006-01-02"
-authorimage = "personalphoto.jpg"
+authorimage = "personalphoto.png"
 resume      = "/resume.html"
 
 [params.meta]
