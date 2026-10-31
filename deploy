@@ -3,15 +3,64 @@
 set -eo pipefail
 env=$1
 static_object_cache_max_age=604800
+function_tag='personal-website'
+deploy_role_name='OrganizationAccountAccessRole'
 
 function set_cache_control_max_age() {
     local path=$1
 
     aws s3 cp \
-        --acl public-read \
         --recursive \
         --cache-control "max-age=$static_object_cache_max_age" \
         "$path" "$path"
+}
+
+# Sets discovered_aws_acct_id to the active organization account tagged for
+# this environment. Sets a global rather than printing the ID because errexit
+# does not apply inside a command substitution.
+function discover_aws_account() {
+    local account_ids account_id matching_tags
+    local matching_account_ids=()
+
+    account_ids=$(
+        aws --profile default organizations list-accounts \
+            --query "Accounts[?State=='ACTIVE'].Id" \
+            --output text
+    )
+
+    for account_id in $account_ids; do
+        matching_tags=$(
+            aws --profile default organizations list-tags-for-resource \
+                --resource-id "$account_id" \
+                --query "length(Tags[?(Key=='env' && Value=='$env') || (Key=='function' && Value=='$function_tag')])" \
+                --output text
+        )
+        if [[ "$matching_tags" == '2' ]]; then
+            matching_account_ids+=("$account_id")
+        fi
+    done
+
+    if [[ ${#matching_account_ids[@]} -ne 1 ]]; then
+        echo "Expected exactly one active account tagged env=$env, function=$function_tag; found ${#matching_account_ids[@]}: ${matching_account_ids[*]}" >&2
+        exit 1
+    fi
+
+    discovered_aws_acct_id=${matching_account_ids[0]}
+}
+
+function assume_deploy_role() {
+    local credentials
+
+    credentials=$(
+        aws --profile default sts assume-role \
+            --role-arn "arn:aws:iam::$discovered_aws_acct_id:role/$deploy_role_name" \
+            --role-session-name "deploy-personal-website-$env" \
+            --query 'Credentials.[AccessKeyId,SecretAccessKey,SessionToken]' \
+            --output text
+    )
+    read -r AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN <<< "$credentials"
+    export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_SESSION_TOKEN
+    unset AWS_PROFILE
 }
 
 script_dir=$(dirname "$(realpath "$0")")
@@ -19,13 +68,15 @@ cd "$script_dir"
 
 source common.sh
 
+discover_aws_account
+assume_deploy_role
+
 rm -rf public
 ./build
 cd public
-aws_account_id=$(aws sts get-caller-identity --query 'Account' --output text)
-s3_base_path="s3://$aws_account_id-website-$env"
-s3_addl_assets_path="s3://$aws_account_id-website-addl-assets-$env"
+s3_base_path="s3://$env-personal-website-$discovered_aws_acct_id"
+s3_addl_assets_path="s3://$env-personal-website-assets-$discovered_aws_acct_id"
 
-aws s3 sync --acl public-read --delete . "$s3_base_path"
-aws s3 cp --acl public-read --recursive "$s3_addl_assets_path" "$s3_base_path"
+aws s3 sync --delete . "$s3_base_path"
+aws s3 cp --recursive "$s3_addl_assets_path" "$s3_base_path"
 set_cache_control_max_age "$s3_base_path/fonts/"
