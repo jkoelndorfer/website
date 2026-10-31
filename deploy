@@ -72,7 +72,7 @@ discover_aws_account
 assume_deploy_role
 
 rm -rf public
-./build
+./build "$env"
 cd public
 s3_base_path="s3://$env-personal-website-$discovered_aws_acct_id"
 s3_addl_assets_path="s3://$env-personal-website-assets-$discovered_aws_acct_id"
