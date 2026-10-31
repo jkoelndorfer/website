@@ -4,12 +4,12 @@
 name = "johnk-io"
 license = "MIT"
 licenselink = "https://github.com/jkoelndorfer/blog/blog/master/themes/johnk-io/LICENSE"
-description = "A minimal theme for my personal blog, johnk.io"
-homepage = "https://www.johnk.io"
+description = "A minimal theme for my personal blog, john.koelndorfer.com"
+homepage = "https://john.koelndorfer.com"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
   name = "John Koelndorfer"
-  homepage = "https://www.johnk.io"
+  homepage = "https://john.koelndorfer.com"

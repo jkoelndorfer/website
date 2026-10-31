@@ -1,10 +1,10 @@
-johnk.io
-========
+john.koelndorfer.com
+====================
 
 This repository contains the complete source for my personal site
-and blog, https://www.johnk.io.
+and blog, https://john.koelndorfer.com
 
-Use `./deploy prod` to deploy to the live version of johnk.io, or
+Use `./deploy prod` to deploy to the live version of the site, or
 `./test` to run `hugo` in local testing mode.
 
 Deploying requires a `default` AWS profile that can list accounts and

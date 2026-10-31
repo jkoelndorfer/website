@@ -4,9 +4,9 @@ function usage() {
 }
 
 if [[ "$env" == 'prod' ]]; then
-    base_url='https://www.johnk.io'
+    base_url='https://john.koelndorfer.com'
 elif [[ "$env" == 'dev' ]]; then
-    base_url='https://www.dev.johnk.io'
+    base_url='https://dev.john.koelndorfer.com'
 else
     usage
     exit 1
